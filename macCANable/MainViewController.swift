@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  macCANable
 //
 //  Created by Robert Huston on 3/6/21.
@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,4 @@ class ViewController: NSViewController {
         }
     }
 
-
 }
-
