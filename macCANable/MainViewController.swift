@@ -3,15 +3,30 @@
 //  macCANable
 //
 //  Created by Robert Huston on 3/6/21.
+//  Copyright © 2021 Pinpoint Dynamics, LLC. All rights reserved.
 //
 
 import Cocoa
 
 class MainViewController: NSViewController {
 
-    @IBOutlet weak var o_AvailableSerialPorts: NSPopUpButton!
     @IBOutlet weak var o_OpenCloseButton: NSButton!
+    @IBOutlet weak var o_AvailableSerialPorts: NSPopUpButton!
     
+    @IBOutlet weak var o_SendButton: NSButton!
+    
+    @IBOutlet weak var o_ID: NSTextField!
+    @IBOutlet weak var o_D0: NSTextField!
+    @IBOutlet weak var o_D1: NSTextField!
+    @IBOutlet weak var o_D2: NSTextField!
+    @IBOutlet weak var o_D3: NSTextField!
+    @IBOutlet weak var o_D4: NSTextField!
+    @IBOutlet weak var o_D5: NSTextField!
+    @IBOutlet weak var o_D6: NSTextField!
+    @IBOutlet weak var o_D7: NSTextField!
+    
+    @IBOutlet weak var o_RxScrollView: NSScrollView!
+
     // This property is Cocoa-bound to setting the bit rate NSPopUpButton value
     @objc let availableBitRates = [
         "10 kbps",
@@ -43,13 +58,43 @@ class MainViewController: NSViewController {
     }
     
     var logic: MainViewControllerLogic!
-    
+
+    // MARK: - View Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        o_ID.formatter = HexadecimalFormatter(3)
+        
+        o_D0.formatter = HexadecimalFormatter(2)
+        o_D1.formatter = HexadecimalFormatter(2)
+        o_D2.formatter = HexadecimalFormatter(2)
+        o_D3.formatter = HexadecimalFormatter(2)
+        o_D4.formatter = HexadecimalFormatter(2)
+        o_D5.formatter = HexadecimalFormatter(2)
+        o_D6.formatter = HexadecimalFormatter(2)
+        o_D7.formatter = HexadecimalFormatter(2)
+        
+        o_ID.stringValue = "0"
+        o_D0.stringValue = "0"
+        o_D1.stringValue = "0"
+        o_D2.stringValue = "0"
+        o_D3.stringValue = "0"
+        o_D4.stringValue = "0"
+        o_D5.stringValue = "0"
+        o_D6.stringValue = "0"
+        o_D7.stringValue = "0"
+        
+        let textView = o_RxScrollView.contentView.documentView as! NSTextView
+        textView.font = NSFont.systemFont(ofSize: NSFont.systemFontSize)
+        
         logic = MainViewControllerLogic(hostViewController: self)
         logic.viewDidLoad()
+        
+        // Temporary
+        let rxTextView = o_RxScrollView.documentView! as! NSTextView
+        rxTextView.string = "You are likely to be eaten by a grue."
+
     }
 
     override var representedObject: Any? {
@@ -82,4 +127,31 @@ class MainViewController: NSViewController {
         print("rx buffer cleared")
     }
 
+}
+
+
+extension MainViewController: NSTextFieldDelegate {
+    
+    func controlTextDidEndEditing(_ obj: Notification) {
+        if let textField = obj.object as? NSTextField {
+            // We only need to check the ID field because we need to restrict ID values to 11 bits
+            if textField == o_ID {
+                let stringValue = textField.stringValue
+                if let n = Int(stringValue, radix: 16) {
+                    if n > 0x7FF {
+                        let n11 = n & 0x7FF
+                        let newValue = (textField.formatter?.string(for: n11))!
+                        let alert = NSAlert()
+                        alert.messageText = "Value too large!"
+                        alert.informativeText = "\"\(stringValue)\" exceeds 11 bits. The value will be truncated to \"\(newValue).\" Have a great day."
+                        alert.beginSheetModal(for: view.window!) { (response) in
+                            textField.stringValue = newValue
+                            textField.becomeFirstResponder()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }

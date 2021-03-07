@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1EB0DF25F55BD100235DFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB0DE25F55BD100235DFB /* Constants.swift */; };
+		4E1EB0E725F55DA600235DFB /* NumericUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB0E625F55DA600235DFB /* NumericUtilities.swift */; };
+		4E1EB0EC25F55E0000235DFB /* NumericUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB0EB25F55E0000235DFB /* NumericUtilitiesTests.swift */; };
+		4E1EB0F125F5618700235DFB /* StringUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB0F025F5618700235DFB /* StringUtilities.swift */; };
+		4E1EB0F625F561A200235DFB /* StringUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB0F525F561A200235DFB /* StringUtilitiesTests.swift */; };
+		4E1EB0FB25F5656C00235DFB /* CANableUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB0FA25F5656C00235DFB /* CANableUtilities.swift */; };
+		4E1EB10025F5658B00235DFB /* CANableUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB0FF25F5658B00235DFB /* CANableUtilitiesTests.swift */; };
+		4E1EB10525F5691F00235DFB /* HexadecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB10425F5691F00235DFB /* HexadecimalFormatter.swift */; };
+		4E1EB10A25F5693F00235DFB /* HexadecimalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EB10925F5693F00235DFB /* HexadecimalFormatterTests.swift */; };
 		4E4B1BB625F43A8A0047BFA3 /* MainViewControllerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B1BB525F43A8A0047BFA3 /* MainViewControllerLogic.swift */; };
 		4E4B1BBF25F47EAD0047BFA3 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 4E4B1BBE25F47EAD0047BFA3 /* ORSSerial */; };
 		4EF2F4C825F402FB00BE9063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2F4C725F402FB00BE9063 /* AppDelegate.swift */; };
@@ -37,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E1EB0DE25F55BD100235DFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4E1EB0E625F55DA600235DFB /* NumericUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericUtilities.swift; sourceTree = "<group>"; };
+		4E1EB0EB25F55E0000235DFB /* NumericUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericUtilitiesTests.swift; sourceTree = "<group>"; };
+		4E1EB0F025F5618700235DFB /* StringUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilities.swift; sourceTree = "<group>"; };
+		4E1EB0F525F561A200235DFB /* StringUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilitiesTests.swift; sourceTree = "<group>"; };
+		4E1EB0FA25F5656C00235DFB /* CANableUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CANableUtilities.swift; sourceTree = "<group>"; };
+		4E1EB0FF25F5658B00235DFB /* CANableUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CANableUtilitiesTests.swift; sourceTree = "<group>"; };
+		4E1EB10425F5691F00235DFB /* HexadecimalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexadecimalFormatter.swift; sourceTree = "<group>"; };
+		4E1EB10925F5693F00235DFB /* HexadecimalFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexadecimalFormatterTests.swift; sourceTree = "<group>"; };
 		4E4B1BB125F436260047BFA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E4B1BB525F43A8A0047BFA3 /* MainViewControllerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerLogic.swift; sourceTree = "<group>"; };
 		4E4B1BC325F47F070047BFA3 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -112,6 +130,11 @@
 				4EF2F4C925F402FB00BE9063 /* MainViewController.swift */,
 				4E4B1BB525F43A8A0047BFA3 /* MainViewControllerLogic.swift */,
 				4EF2F4CB25F402FB00BE9063 /* Document.swift */,
+				4E1EB0DE25F55BD100235DFB /* Constants.swift */,
+				4E1EB0E625F55DA600235DFB /* NumericUtilities.swift */,
+				4E1EB0F025F5618700235DFB /* StringUtilities.swift */,
+				4E1EB10425F5691F00235DFB /* HexadecimalFormatter.swift */,
+				4E1EB0FA25F5656C00235DFB /* CANableUtilities.swift */,
 				4E4B1BC325F47F070047BFA3 /* BridgingHeader.h */,
 				4EF2F4CF25F402FC00BE9063 /* Main.storyboard */,
 				4EF2F4CD25F402FC00BE9063 /* Assets.xcassets */,
@@ -125,6 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				4EF2F4DC25F402FC00BE9063 /* macCANableTests.swift */,
+				4E1EB0EB25F55E0000235DFB /* NumericUtilitiesTests.swift */,
+				4E1EB0F525F561A200235DFB /* StringUtilitiesTests.swift */,
+				4E1EB10925F5693F00235DFB /* HexadecimalFormatterTests.swift */,
+				4E1EB0FF25F5658B00235DFB /* CANableUtilitiesTests.swift */,
 				4EF2F4DE25F402FC00BE9063 /* Info.plist */,
 			);
 			path = macCANableTests;
@@ -206,6 +233,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Pinpoint Dynamics, LLC";
 				TargetAttributes = {
 					4EF2F4C325F402FB00BE9063 = {
 						CreatedOnToolsVersion = 12.4;
@@ -274,11 +302,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1EB10525F5691F00235DFB /* HexadecimalFormatter.swift in Sources */,
+				4E1EB0E725F55DA600235DFB /* NumericUtilities.swift in Sources */,
 				4EF2F4CA25F402FB00BE9063 /* MainViewController.swift in Sources */,
 				4E4B1BB625F43A8A0047BFA3 /* MainViewControllerLogic.swift in Sources */,
+				4E1EB0F125F5618700235DFB /* StringUtilities.swift in Sources */,
 				4EF2F4C825F402FB00BE9063 /* AppDelegate.swift in Sources */,
 				4EF2F50825F4068900BE9063 /* MainWindowController.swift in Sources */,
+				4E1EB0FB25F5656C00235DFB /* CANableUtilities.swift in Sources */,
 				4EF2F4CC25F402FB00BE9063 /* Document.swift in Sources */,
+				4E1EB0DF25F55BD100235DFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +319,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1EB0EC25F55E0000235DFB /* NumericUtilitiesTests.swift in Sources */,
+				4E1EB0F625F561A200235DFB /* StringUtilitiesTests.swift in Sources */,
 				4EF2F4DD25F402FC00BE9063 /* macCANableTests.swift in Sources */,
+				4E1EB10A25F5693F00235DFB /* HexadecimalFormatterTests.swift in Sources */,
+				4E1EB10025F5658B00235DFB /* CANableUtilitiesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

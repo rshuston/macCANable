@@ -709,14 +709,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box borderType="line" title="Port Control" id="CoW-ul-5K4">
+                            <box borderType="line" title="Port Control" translatesAutoresizingMaskIntoConstraints="NO" id="CoW-ul-5K4">
                                 <rect key="frame" x="17" y="644" width="344" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="iKw-pr-ZHf">
                                     <rect key="frame" x="3" y="3" width="338" height="86"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvt-m9-h6k">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" id="mvt-m9-h6k">
                                             <rect key="frame" x="13" y="39" width="80" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Open" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kMJ-Ag-XSb">
@@ -727,7 +726,7 @@
                                                 <action selector="doOpenClose:" target="5gI-5U-AMq" id="6Bn-yP-2Dk"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-Ks-3kZ">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" id="GxQ-Ks-3kZ">
                                             <rect key="frame" x="124" y="48" width="30" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Port" id="gaT-Xk-yeD">
@@ -736,7 +735,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P7u-U5-EPx">
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" id="P7u-U5-EPx">
                                             <rect key="frame" x="157" y="42" width="165" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="usbmodem1234567" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="8iW-az-xEP" id="zWX-19-3Ao">
@@ -753,7 +752,7 @@
                                                 <action selector="doSelectedSerialPort:" target="5gI-5U-AMq" id="r9l-cT-uff"/>
                                             </connections>
                                         </popUpButton>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcg-tG-BUI">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" id="jcg-tG-BUI">
                                             <rect key="frame" x="109" y="22" width="45" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Bitrate" id="7Xa-JN-Eld">
@@ -762,7 +761,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXA-BI-lOD">
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" id="fXA-BI-lOD">
                                             <rect key="frame" x="157" y="16" width="97" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="500 kbps" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="9Gs-6j-ufy" id="A3B-Cq-jy8">
@@ -781,10 +780,13 @@
                                         </popUpButton>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="a2y-fy-2Vx"/>
+                                    <constraint firstAttribute="width" constant="338" id="jW4-lb-dXv"/>
+                                </constraints>
                             </box>
-                            <box borderType="line" title="Transmission" id="5DN-Df-fXo">
+                            <box borderType="line" title="Transmission" translatesAutoresizingMaskIntoConstraints="NO" id="5DN-Df-fXo">
                                 <rect key="frame" x="373" y="644" width="634" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="NYb-uL-NFI">
                                     <rect key="frame" x="3" y="3" width="628" height="86"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -808,6 +810,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="CxK-w0-IZ0"/>
+                                            </connections>
                                         </textField>
                                         <popUpButton verticalHuggingPriority="750" id="Ups-U9-hvC">
                                             <rect key="frame" x="179" y="18" width="48" height="25"/>
@@ -834,6 +839,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="REZ-tA-Xwe"/>
+                                            </connections>
                                         </textField>
                                         <textField identifier="field_D1" verticalHuggingPriority="750" tag="2" id="YPU-Ed-Iwj">
                                             <rect key="frame" x="279" y="21" width="40" height="21"/>
@@ -843,6 +851,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="fue-Fb-5AX"/>
+                                            </connections>
                                         </textField>
                                         <textField identifier="field_D2" verticalHuggingPriority="750" tag="3" id="diM-Jf-GNv">
                                             <rect key="frame" x="328" y="21" width="40" height="21"/>
@@ -852,6 +863,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="zWC-QP-8Vv"/>
+                                            </connections>
                                         </textField>
                                         <textField identifier="field_D3" verticalHuggingPriority="750" tag="4" id="DmH-jj-RBe">
                                             <rect key="frame" x="376" y="21" width="40" height="21"/>
@@ -861,6 +875,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="YnT-aU-zGn"/>
+                                            </connections>
                                         </textField>
                                         <textField identifier="field_D4" verticalHuggingPriority="750" tag="5" id="Tbk-of-wGg">
                                             <rect key="frame" x="424" y="21" width="40" height="21"/>
@@ -870,6 +887,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="4So-Cq-3uj"/>
+                                            </connections>
                                         </textField>
                                         <textField identifier="field_D5" verticalHuggingPriority="750" tag="6" id="2sE-BS-iwc">
                                             <rect key="frame" x="472" y="21" width="40" height="21"/>
@@ -879,6 +899,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="3up-qR-yWQ"/>
+                                            </connections>
                                         </textField>
                                         <textField identifier="field_D6" verticalHuggingPriority="750" tag="7" id="BWZ-jy-adX">
                                             <rect key="frame" x="520" y="21" width="40" height="21"/>
@@ -888,6 +911,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="33Q-gc-rxF"/>
+                                            </connections>
                                         </textField>
                                         <textField identifier="field_D7" verticalHuggingPriority="750" tag="8" id="BJi-Bp-jSN">
                                             <rect key="frame" x="568" y="21" width="40" height="21"/>
@@ -897,6 +923,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="EQo-qY-ogG"/>
+                                            </connections>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lBG-JB-7lG">
                                             <rect key="frame" x="140" y="50" width="21" height="16"/>
@@ -990,10 +1019,13 @@
                                         </textField>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="628" id="OBB-y5-E1m"/>
+                                    <constraint firstAttribute="height" constant="100" id="RBT-6R-Gal"/>
+                                </constraints>
                             </box>
-                            <box fixedFrame="YES" borderType="line" title="Reception" translatesAutoresizingMaskIntoConstraints="NO" id="8YT-zv-XH2">
+                            <box borderType="line" title="Reception" translatesAutoresizingMaskIntoConstraints="NO" id="8YT-zv-XH2">
                                 <rect key="frame" x="373" y="16" width="634" height="624"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="6mY-Xq-h0D">
                                     <rect key="frame" x="3" y="3" width="628" height="606"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1038,12 +1070,36 @@
                                         </button>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="620" id="lo6-2p-dkk"/>
+                                    <constraint firstAttribute="width" constant="628" id="ogy-Ct-HSk"/>
+                                </constraints>
                             </box>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="5DN-Df-fXo" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" symbolic="YES" id="ZT2-sa-x1y"/>
+                            <constraint firstAttribute="trailing" secondItem="5DN-Df-fXo" secondAttribute="trailing" constant="20" symbolic="YES" id="Zww-2a-ABq"/>
+                            <constraint firstAttribute="bottom" secondItem="8YT-zv-XH2" secondAttribute="bottom" constant="20" symbolic="YES" id="b5k-WU-iHw"/>
+                            <constraint firstItem="CoW-ul-5K4" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="20" symbolic="YES" id="dkT-uv-fXw"/>
+                            <constraint firstAttribute="trailing" secondItem="8YT-zv-XH2" secondAttribute="trailing" constant="20" symbolic="YES" id="fVI-UV-eqe"/>
+                            <constraint firstItem="8YT-zv-XH2" firstAttribute="top" secondItem="5DN-Df-fXo" secondAttribute="bottom" constant="8" symbolic="YES" id="g0A-6E-enW"/>
+                            <constraint firstItem="CoW-ul-5K4" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" symbolic="YES" id="zJC-y2-rA6"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="o_AvailableSerialPorts" destination="P7u-U5-EPx" id="Mi4-kj-Fkm"/>
+                        <outlet property="o_D0" destination="LK8-8r-3GU" id="jvL-pR-hTY"/>
+                        <outlet property="o_D1" destination="YPU-Ed-Iwj" id="lUp-LV-f3h"/>
+                        <outlet property="o_D2" destination="diM-Jf-GNv" id="uTH-Nx-NLO"/>
+                        <outlet property="o_D3" destination="DmH-jj-RBe" id="D7P-8s-aPr"/>
+                        <outlet property="o_D4" destination="Tbk-of-wGg" id="luF-5K-6v5"/>
+                        <outlet property="o_D5" destination="2sE-BS-iwc" id="LFD-z1-zkz"/>
+                        <outlet property="o_D6" destination="BWZ-jy-adX" id="GGa-X3-npv"/>
+                        <outlet property="o_D7" destination="BJi-Bp-jSN" id="WFd-au-fms"/>
+                        <outlet property="o_ID" destination="emm-fQ-au8" id="hFg-kS-uCn"/>
                         <outlet property="o_OpenCloseButton" destination="mvt-m9-h6k" id="2VU-gR-6RO"/>
+                        <outlet property="o_RxScrollView" destination="nGF-d2-9sm" id="fTO-Ja-a2P"/>
+                        <outlet property="o_SendButton" destination="cZK-g3-WIA" id="q7o-5C-IhS"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

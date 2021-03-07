@@ -3,6 +3,7 @@
 //  macCANable
 //
 //  Created by Robert Huston on 3/6/21.
+//  Copyright © 2021 Pinpoint Dynamics, LLC. All rights reserved.
 //
 
 import Foundation

@@ -5,7 +5,7 @@ on a Macintosh using a [CANable](https://canable.io) device.
 
 ## Basic Setup and Test:
 
-Note: You should have another device connected to your CAN bus that can transmit
+You'll need to have another device connected to your CAN bus that can transmit
 and receive messages. Examples are a Raspberry Pi with a CAN hat, a BeagleBone,
 a Linux or Windows machine with a suitable CAN adapter attached and configured.
 
