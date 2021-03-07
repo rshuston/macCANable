@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4B1BB625F43A8A0047BFA3 /* MainViewControllerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B1BB525F43A8A0047BFA3 /* MainViewControllerLogic.swift */; };
+		4E4B1BBF25F47EAD0047BFA3 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 4E4B1BBE25F47EAD0047BFA3 /* ORSSerial */; };
 		4EF2F4C825F402FB00BE9063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2F4C725F402FB00BE9063 /* AppDelegate.swift */; };
 		4EF2F4CA25F402FB00BE9063 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2F4C925F402FB00BE9063 /* MainViewController.swift */; };
 		4EF2F4CC25F402FB00BE9063 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2F4CB25F402FB00BE9063 /* Document.swift */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E4B1BB125F436260047BFA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4E4B1BB525F43A8A0047BFA3 /* MainViewControllerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerLogic.swift; sourceTree = "<group>"; };
+		4E4B1BC325F47F070047BFA3 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		4EF2F4C425F402FB00BE9063 /* macCANable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macCANable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF2F4C725F402FB00BE9063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF2F4C925F402FB00BE9063 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4B1BBF25F47EAD0047BFA3 /* ORSSerial in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,7 @@
 		4EF2F4BB25F402FB00BE9063 = {
 			isa = PBXGroup;
 			children = (
+				4E4B1BB125F436260047BFA3 /* README.md */,
 				4EF2F4C625F402FB00BE9063 /* macCANable */,
 				4EF2F4DB25F402FC00BE9063 /* macCANableTests */,
 				4EF2F4E625F402FC00BE9063 /* macCANableUITests */,
@@ -103,9 +110,11 @@
 				4EF2F4C725F402FB00BE9063 /* AppDelegate.swift */,
 				4EF2F50725F4068900BE9063 /* MainWindowController.swift */,
 				4EF2F4C925F402FB00BE9063 /* MainViewController.swift */,
+				4E4B1BB525F43A8A0047BFA3 /* MainViewControllerLogic.swift */,
 				4EF2F4CB25F402FB00BE9063 /* Document.swift */,
-				4EF2F4CD25F402FC00BE9063 /* Assets.xcassets */,
+				4E4B1BC325F47F070047BFA3 /* BridgingHeader.h */,
 				4EF2F4CF25F402FC00BE9063 /* Main.storyboard */,
+				4EF2F4CD25F402FC00BE9063 /* Assets.xcassets */,
 				4EF2F4D225F402FC00BE9063 /* Info.plist */,
 				4EF2F4D325F402FC00BE9063 /* macCANable.entitlements */,
 			);
@@ -146,6 +155,9 @@
 			dependencies = (
 			);
 			name = macCANable;
+			packageProductDependencies = (
+				4E4B1BBE25F47EAD0047BFA3 /* ORSSerial */,
+			);
 			productName = macCANable;
 			productReference = 4EF2F4C425F402FB00BE9063 /* macCANable.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 4EF2F4BB25F402FB00BE9063;
+			packageReferences = (
+				4E4B1BBD25F47EAD0047BFA3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+			);
 			productRefGroup = 4EF2F4C525F402FB00BE9063 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EF2F4CA25F402FB00BE9063 /* MainViewController.swift in Sources */,
+				4E4B1BB625F43A8A0047BFA3 /* MainViewControllerLogic.swift in Sources */,
 				4EF2F4C825F402FB00BE9063 /* AppDelegate.swift in Sources */,
 				4EF2F50825F4068900BE9063 /* MainWindowController.swift in Sources */,
 				4EF2F4CC25F402FB00BE9063 /* Document.swift in Sources */,
@@ -439,6 +455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.macCANable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = macCANable/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -458,6 +475,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.macCANable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = macCANable/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -582,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4E4B1BBD25F47EAD0047BFA3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4E4B1BBE25F47EAD0047BFA3 /* ORSSerial */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E4B1BBD25F47EAD0047BFA3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4EF2F4BC25F402FB00BE9063 /* Project object */;
 }
