@@ -218,5 +218,138 @@ class macCANableUITests: XCTestCase {
         let value = textField.value as! String
         XCTAssertEqual(value, "02")
     }
+    
+    // MARK: - DLC Data Field Activation
+    
+    func testDLC_1_Deactivates_D1toD7() throws {
+        let untitledWindow = app.windows["Untitled"]
+        
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["1"].click()
+        
+        XCTAssert(untitledWindow.textFields["field_D0"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D1"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D2"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D3"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D4"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D5"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D6"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D7"].isEnabled)
+    }
+    
+    func testDLC_2_Deactivates_D2toD7() throws {
+        let untitledWindow = app.windows["Untitled"]
+        
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["2"].click()
+        
+        XCTAssert(untitledWindow.textFields["field_D0"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D1"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D2"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D3"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D4"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D5"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D6"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D7"].isEnabled)
+    }
+    
+    func testDLC_3_Deactivates_D3toD7() throws {
+        let untitledWindow = app.windows["Untitled"]
+        
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["3"].click()
+        
+        XCTAssert(untitledWindow.textFields["field_D0"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D1"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D2"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D3"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D4"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D5"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D6"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D7"].isEnabled)
+    }
+    
+    func testDLC_4_Deactivates_D4toD7() throws {
+        let untitledWindow = app.windows["Untitled"]
+        
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["4"].click()
+        
+        XCTAssert(untitledWindow.textFields["field_D0"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D1"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D2"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D3"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D4"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D5"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D6"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D7"].isEnabled)
+    }
+    
+    func testDLC_5_Deactivates_D5toD7() throws {
+        let untitledWindow = app.windows["Untitled"]
+        
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["5"].click()
+        
+        XCTAssert(untitledWindow.textFields["field_D0"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D1"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D2"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D3"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D4"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D5"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D6"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D7"].isEnabled)
+    }
+    
+    func testDLC_6_Deactivates_D6toD7() throws {
+        let untitledWindow = app.windows["Untitled"]
+        
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["6"].click()
+        
+        XCTAssert(untitledWindow.textFields["field_D0"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D1"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D2"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D3"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D4"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D5"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D6"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D7"].isEnabled)
+    }
+    
+    func testDLC_7_Deactivates_D7() throws {
+        let untitledWindow = app.windows["Untitled"]
+        
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["7"].click()
+        
+        XCTAssert(untitledWindow.textFields["field_D0"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D1"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D2"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D3"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D4"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D5"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D6"].isEnabled)
+        XCTAssert(!untitledWindow.textFields["field_D7"].isEnabled)
+    }
+    
+    func testDLC_8_Deactivates_None() throws {
+        let untitledWindow = app.windows["Untitled"]
+        
+        // Default is 8, so set to 1 first
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["1"].click()
 
+        untitledWindow.popUpButtons["popup_DLC"].click()
+        untitledWindow.menuItems["8"].click()
+        
+        XCTAssert(untitledWindow.textFields["field_D0"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D1"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D2"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D3"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D4"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D5"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D6"].isEnabled)
+        XCTAssert(untitledWindow.textFields["field_D7"].isEnabled)
+    }
 }

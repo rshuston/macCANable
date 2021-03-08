@@ -715,7 +715,7 @@
                                     <rect key="frame" x="3" y="3" width="338" height="86"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" id="mvt-m9-h6k">
+                                        <button verticalHuggingPriority="750" id="mvt-m9-h6k">
                                             <rect key="frame" x="13" y="39" width="80" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Open" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kMJ-Ag-XSb">
@@ -726,7 +726,7 @@
                                                 <action selector="doOpenClose:" target="5gI-5U-AMq" id="6Bn-yP-2Dk"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" id="GxQ-Ks-3kZ">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="GxQ-Ks-3kZ">
                                             <rect key="frame" x="124" y="48" width="30" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Port" id="gaT-Xk-yeD">
@@ -735,13 +735,13 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" id="P7u-U5-EPx">
+                                        <popUpButton identifier="popup_Port" verticalHuggingPriority="750" id="P7u-U5-EPx">
                                             <rect key="frame" x="157" y="42" width="165" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <popUpButtonCell key="cell" type="push" title="usbmodem1234567" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="8iW-az-xEP" id="zWX-19-3Ao">
+                                            <popUpButtonCell key="cell" type="push" title="usbmodem1234567" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="8iW-az-xEP" id="zWX-19-3Ao">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="menu"/>
-                                                <menu key="menu" id="KC5-Ty-MaP">
+                                                <menu key="menu" autoenablesItems="NO" id="KC5-Ty-MaP">
                                                     <items>
                                                         <menuItem title="usbmodem1234567" state="on" id="8iW-az-xEP"/>
                                                         <menuItem title="usbmodem8888888" id="gnt-jX-arf"/>
@@ -752,7 +752,7 @@
                                                 <action selector="doSelectedSerialPort:" target="5gI-5U-AMq" id="r9l-cT-uff"/>
                                             </connections>
                                         </popUpButton>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" id="jcg-tG-BUI">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jcg-tG-BUI">
                                             <rect key="frame" x="109" y="22" width="45" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Bitrate" id="7Xa-JN-Eld">
@@ -761,7 +761,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" id="fXA-BI-lOD">
+                                        <popUpButton identifier="popup_Bitrate" verticalHuggingPriority="750" id="fXA-BI-lOD">
                                             <rect key="frame" x="157" y="16" width="97" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="500 kbps" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="9Gs-6j-ufy" id="A3B-Cq-jy8">
@@ -814,7 +814,7 @@
                                                 <outlet property="delegate" destination="5gI-5U-AMq" id="CxK-w0-IZ0"/>
                                             </connections>
                                         </textField>
-                                        <popUpButton verticalHuggingPriority="750" id="Ups-U9-hvC">
+                                        <popUpButton identifier="popup_DLC" verticalHuggingPriority="750" id="Ups-U9-hvC">
                                             <rect key="frame" x="179" y="18" width="48" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="FIu-Bg-S9r" id="nMM-PX-oUo">
@@ -1088,6 +1088,7 @@
                     </view>
                     <connections>
                         <outlet property="o_AvailableSerialPorts" destination="P7u-U5-EPx" id="Mi4-kj-Fkm"/>
+                        <outlet property="o_BitRate" destination="fXA-BI-lOD" id="S54-y6-wGn"/>
                         <outlet property="o_D0" destination="LK8-8r-3GU" id="jvL-pR-hTY"/>
                         <outlet property="o_D1" destination="YPU-Ed-Iwj" id="lUp-LV-f3h"/>
                         <outlet property="o_D2" destination="diM-Jf-GNv" id="uTH-Nx-NLO"/>
