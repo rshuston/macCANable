@@ -88,7 +88,7 @@ class MainViewController: NSViewController {
         o_D7.stringValue = "0"
         
         let textView = o_RxScrollView.contentView.documentView as! NSTextView
-        textView.font = NSFont.systemFont(ofSize: NSFont.systemFontSize)
+        textView.font = NSFont.systemFont(ofSize: 14)
         
         logic = MainViewControllerLogic(hostController: self)
         logic.viewDidLoad()
