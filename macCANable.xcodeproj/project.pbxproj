@@ -56,6 +56,8 @@
 		4E1EB0FF25F5658B00235DFB /* CANableUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CANableUtilitiesTests.swift; sourceTree = "<group>"; };
 		4E1EB10425F5691F00235DFB /* HexadecimalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexadecimalFormatter.swift; sourceTree = "<group>"; };
 		4E1EB10925F5693F00235DFB /* HexadecimalFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexadecimalFormatterTests.swift; sourceTree = "<group>"; };
+		4E30CB0925F7A1A500E53D27 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4E30CB0A25F7A1AF00E53D27 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		4E4B1BB125F436260047BFA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E4B1BB525F43A8A0047BFA3 /* MainViewControllerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerLogic.swift; sourceTree = "<group>"; };
 		4E4B1BC325F47F070047BFA3 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -107,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				4E4B1BB125F436260047BFA3 /* README.md */,
+				4E30CB0925F7A1A500E53D27 /* LICENSE */,
+				4E30CB0A25F7A1AF00E53D27 /* Makefile */,
 				4EF2F4C625F402FB00BE9063 /* macCANable */,
 				4EF2F4DB25F402FC00BE9063 /* macCANableTests */,
 				4EF2F4E625F402FC00BE9063 /* macCANableUITests */,
